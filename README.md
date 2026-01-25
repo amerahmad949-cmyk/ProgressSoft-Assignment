@@ -137,8 +137,8 @@ Now in order to do the reverse proxy using Nginx ,I accessed the directory `/etc
 
 ![editdefault](./screensh/editdef.png)
  
-After doing this, the service should be restarted using the command sudo systemctl restart nginx so that the changes can take effect.
+After doing this, the service should be restarted using the command `sudo systemctl restart nginx` so that the changes can take effect.
  
-We can see that the reverse proxy is working as required, and the Tomcat server was accessed through http://127.0.0.1 without specifying port 7070.
+We can see that the reverse proxy is working as required, and the Tomcat server was accessed through `http://127.0.0.1` without specifying port 7070.
  
 ![workingproxy](./screensh/nginxgood.png)
