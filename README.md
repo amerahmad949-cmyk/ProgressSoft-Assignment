@@ -152,9 +152,7 @@ I  installed VirtualBox and Vagrant on my local machine which runs Windows. A di
 - `Vagrantfile`
 - `provision.sh`
 
-Started by opening the PowerShell inside the folder and used the command ```bash
-vagrant up``` 
-which returned successfully as in the image below:
+Started by opening the PowerShell inside the folder and used the command `vagrant up` which returned successfully as in the image below:
 
 ![tomcat running](./screensh/vagrantdone.png)
 
