@@ -143,15 +143,16 @@ We can see that the reverse proxy is working as required, and the Tomcat server 
  
 ![workingproxy](./screensh/nginxgood.png)
 
-Coming to the last part of the task which is creating a Vagrant virtual machine to automatically provision an Ubuntu 24.04 environment with Java 8 and Apache Tomcat 9.
+This section covers the final part of the task, which is creating a Vagrant virtual machine to automatically provision an Ubuntu 24.04 environment with Java 8 and Apache Tomcat 9.
 
 **Note that i executed this part on Windows instead of Ubuntu , that's because of nested virtualization limitations when running Vagrant inside a VirtualBox Linux , so i executed this part on my local machine which runs Windows to ensure proper virtualization.**
 
-I installed VirtualBox and Vagrant on the Windows then created a Vagrantfile using the bento/ubuntu-24.04 image , then i created a folder named vagrant.
+I  installed VirtualBox and Vagrant on my local machine which runs Windows. A directory named `vagrant` was created, containing the following files:
 
-The folder i created contained the `Vagrantfile` and `provision.sh` which are included in the repo.
+- `Vagrantfile`
+- `provision.sh`
 
-Started by opening the PowerShell inside the folder and used the command `vagrant up` which returned successfully as in the image below:
+Started by opening the PowerShell inside the folder and used the command ```bash vagrant up``` which returned successfully as in the image below:
 
 ![tomcat running](./screensh/vagrantdone.png)
 
