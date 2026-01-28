@@ -142,3 +142,20 @@ After doing this, the service should be restarted using the command `sudo system
 We can see that the reverse proxy is working as required, and the Tomcat server was accessed through `http://127.0.0.1` without specifying port 7070.
  
 ![workingproxy](./screensh/nginxgood.png)
+
+Coming to the last part of the task which is creating a Vagrant virtual machine to automatically provision an Ubuntu 24.04 environment with Java 8 and Apache Tomcat 9.
+
+**Note that i executed this part on Windows instead of Ubuntu , that's because of nested virtualization limitations when running Vagrant inside a VirtualBox Linux , so i executed this part on my local machine which runs Windows to ensure proper virtualization.**
+
+I installed VirtualBox and Vagrant on the Windows then created a Vagrantfile using the bento/ubuntu-24.04 image , then i created a folder named vagrant.
+
+The folder i created contained the `Vagrantfile` and `provision.sh` which are included in the repo.
+
+Started by opening the PowerShell inside the folder and used the command `vagrant up` which returned successfully as in the image below:
+
+![tomcat running](./screensh/vagrantdone.png)
+
+I accessed Tomcat via port 9090 from my local machine using the following URL : `http://localhost:9090` which was successful as in the image shown below:
+
+![tomcat running](./screensh/tomvagrant.png)
+
