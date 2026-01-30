@@ -187,7 +187,7 @@ Then i pushed the image to registry.
 
 ### Running Nginx and PostgreSQL as Docker containers.
 
-# Nginx
+#### Nginx
 
 The image shows Nginx running successfully inside a Docker container.
 
@@ -199,7 +199,7 @@ The image below shows the running Nginx on port 8081.
 
 ![nginxdocker](./screensh/nginxgood2.png)
 
-# PostgreSQL 
+#### PostgreSQL 
 
 The PostgreSQL container was configured with the username `ahm4d`, the password `ahm4d123`, and a database named `progresssoftdb`. The service was exposed on port 5432 to allow access from the host system.
 
@@ -219,7 +219,7 @@ The worker node runs the actual application containers. It receives instructions
 
 To identify the Master or Worker node , we can use the following command `kubectl get nodes` and the master node will be labeled as Master and the ones without a label is the Worker.
 
-# Deploying a sample service
+#### Deploying a sample service
 
 The screenshot demonstrates the use of kubectl commands to create, expose, and verify a Kubernetes deployment on a MicroK8s cluster.
 
