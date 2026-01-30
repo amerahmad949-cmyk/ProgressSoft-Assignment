@@ -170,7 +170,7 @@ First of all i installed a sample WAR file as in the image below :
 
 then i bulit the Tomcat docker image as shown below :
 
-![bulidimage](./screensh/bulidsamplewar.png)
+![bulidimage](./screensh/buildsamplewar.png)
 
 The image below shows the successful execution of the Tomcat Docker container using the `docker run` command.
 
