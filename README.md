@@ -160,3 +160,76 @@ I accessed Tomcat via port 9090 from my local machine using the following URL : 
 
 ![tomcat running](./screensh/tomvagrant.png)
 
+## DevOps
+
+### Creating a Dockerfile for a Tomcat Docker image and deploying sample WAR then psuhing it into Docker registry
+
+First of all i installed a sample WAR file as in the image below :
+
+![samplewar](./screensh/downloadsamplewar.png)
+
+then i bulit the Tomcat docker image as shown below :
+
+![bulidimage](./screensh/bulidsamplewar.png)
+
+The image below shows the successful execution of the Tomcat Docker container using the `docker run` command.
+
+![runimage](./screensh/runsample.png)
+
+The image shows the sample WAR application successfully running on Apache Tomcat inside the Docker container.
+
+![workingdocker](./screensh/samplegood.png)
+
+Then i pushed the image to registry.
+
+![push](./screensh/dockerpush.png)
+![push](./screensh/dockerpush2.png)
+
+### Running Nginx and PostgreSQL as Docker containers.
+
+# Nginx
+
+The image shows Nginx running successfully inside a Docker container.
+
+![nginxdocker](./screensh/runnginx.png)
+
+**Note that the Nginx container was mapped to host port 8081 because the existing Nginx on my host system was running, while the service inside the container continued to run on its default port 80**
+
+The image below shows the running Nginx on port 8081.
+
+![nginxdocker](./screensh/nginxgood2.png)
+
+# PostgreSQL 
+
+The PostgreSQL container was configured with the username `ahm4d`, the password `ahm4d123`, and a database named `progresssoftdb`. The service was exposed on port 5432 to allow access from the host system.
+
+![SQLdocker](./screensh/runsqldocker.png)
+
+### Kubernetes
+
+1. Kubernetes is an open-source platform used to manage containerized applications. It helps in deploying, scaling, and running containers across multiple machines automatically. Kubernetes ensures that applications keep running even if some containers or servers fail
+
+2. Master Node
+
+The master node is responsible for managing the Kubernetes cluster. It controls the cluster, schedules workloads, and keeps track of the overall system state. It does not usually run application containers.
+
+Worker Node
+
+The worker node runs the actual application containers. It receives instructions from the master node and executes them by running Pods and services.
+
+To identify the Master or Worker node , we can use the following command `kubectl get nodes` and the master node will be labeled as Master and the ones without a label is the Worker.
+
+# Deploying a sample service
+
+The screenshot demonstrates the use of kubectl commands to create, expose, and verify a Kubernetes deployment on a MicroK8s cluster.
+
+![k8s](./screensh/k8s.png)
+
+The image below verfies that the deployed Kubernetes is working.
+
+![workingk8s](./screensh/goodk8s.png)
+
+
+
+
+
